@@ -19,6 +19,8 @@ const validationSchema = Yup.object({
 });
 
 class ContactForm extends Component {
+  static propTypes = { submit: PropTypes.func.isRequired };
+
   state = {
     name: '',
     number: '',
@@ -62,9 +64,5 @@ class ContactForm extends Component {
     );
   }
 }
-
-ContactForm.propTypes = {
-  submit: PropTypes.func.isRequired,
-};
 
 export default ContactForm;
